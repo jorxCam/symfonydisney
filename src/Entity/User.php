@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -28,6 +30,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     #[ORM\Column]
     private ?string $password = null;
+
+    #[ORM\OneToMany(mappedBy: 'user_article', targetEntity: Articles::class)]
+    private Collection $articles;
+
+    #[ORM\OneToMany(mappedBy: 'user_prop', targetEntity: Propositions::class)]
+    private Collection $propositions;
+
+    public function __construct()
+    {
+        $this->articles = new ArrayCollection();
+        $this->propositions = new ArrayCollection();
+    }
 
   
 
@@ -102,6 +116,66 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection<int, Articles>
+     */
+    public function getArticles(): Collection
+    {
+        return $this->articles;
+    }
+
+    public function addArticle(Articles $article): self
+    {
+        if (!$this->articles->contains($article)) {
+            $this->articles->add($article);
+            $article->setUserArticle($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Articles $article): self
+    {
+        if ($this->articles->removeElement($article)) {
+            // set the owning side to null (unless already changed)
+            if ($article->getUserArticle() === $this) {
+                $article->setUserArticle(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Propositions>
+     */
+    public function getPropositions(): Collection
+    {
+        return $this->propositions;
+    }
+
+    public function addProposition(Propositions $proposition): self
+    {
+        if (!$this->propositions->contains($proposition)) {
+            $this->propositions->add($proposition);
+            $proposition->setUserProp($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProposition(Propositions $proposition): self
+    {
+        if ($this->propositions->removeElement($proposition)) {
+            // set the owning side to null (unless already changed)
+            if ($proposition->getUserProp() === $this) {
+                $proposition->setUserProp(null);
+            }
+        }
+
+        return $this;
     }
 
 

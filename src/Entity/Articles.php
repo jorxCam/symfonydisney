@@ -29,6 +29,9 @@ class Articles
     #[ORM\Column]
     private ?bool $toShow = null;
 
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    private ?user $user_article = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +93,18 @@ class Articles
     public function setToShow(bool $toShow): self
     {
         $this->toShow = $toShow;
+
+        return $this;
+    }
+
+    public function getUserArticle(): ?user
+    {
+        return $this->user_article;
+    }
+
+    public function setUserArticle(?user $user_article): self
+    {
+        $this->user_article = $user_article;
 
         return $this;
     }
