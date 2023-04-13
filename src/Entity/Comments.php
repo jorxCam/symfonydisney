@@ -23,6 +23,10 @@ class Comments
     #[ORM\ManyToOne(inversedBy: 'comments')]
     private ?Articles $comment_article = null;
 
+    #[ORM\ManyToOne(inversedBy: 'client_comment')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Clients $clients = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +64,18 @@ class Comments
     public function setCommentArticle(?Articles $comment_article): self
     {
         $this->comment_article = $comment_article;
+
+        return $this;
+    }
+
+    public function getClients(): ?Clients
+    {
+        return $this->clients;
+    }
+
+    public function setClients(?Clients $clients): self
+    {
+        $this->clients = $clients;
 
         return $this;
     }
