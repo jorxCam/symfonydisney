@@ -2,9 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Disneyplus!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="stylesheet" href="css/style.css" type='text/css'>
+        <script src="js/app.js" ></script>
+        <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -14,6 +18,120 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+     <header>  
+        <nav class="navbar">
+            <div class="logo">
+                            <a href="#" class="active hidden logodisney">
+                                <object data="{{asset ('assets/logodisney.svg')}}" width="100" height="100"></object>
+                            </a>
+            </div>
+
+            <div class="buttonidentifier">
+
+                <a class="bouton-disney-inscription hidden sincrire" href="{{path ('app_register') }}">S'Inscrire</a>
+                <a class="bouton-disney" href="{{path ('app_login') }}">S'Identifier</a>
+                {# <ul>
+                    <li>
+                        <a href="#" class="hidden sinscrire">S'Inscrire </a>
+                    </li>
+                    <li>
+                        <a href="#">S'Identifier </a>
+                    </li>
+                </ul> #}
+            </div>
+
+        </nav>
+
+</header>
+
+
+ {% block body %}
+
+   
+{% endblock %}
+
+<div class="disneyfinal">
+        <img src="assets/disneyFinal.svg" width="90" alt="image">
+    </div>
+<section class="footer">
+    <div class="conditions">  
+    <ul>
+        <li>       
+
+                <i class="fa-solid fa-globe"></i>
+                <select id="language-selector" class="fine">
+                    <option value="/en-fr/">English</option>
+                    <option selected="" value="/fr-fr/">Français</option>
+                </select>
+
+        </li>
+    </ul>
+    <ul>
+        <li> 
+            <p class="footer-text">Conditions générales d'abonnement</p>
+        </li>
+    </ul>
+    <ul>
+        <li> 
+            <p class="footer-text">Règles de Respect de la Vie Privée</p>
+        </li>
+    </ul>
+            <ul>
+        <li> 
+            <p class="footer-text">Droits Données dans l'UE et au R-U</p>
+        </li>
+    </ul>
+    <ul>
+        <li> 
+            <p class="footer-text">Modalités relatives aux cookies</p>
+        </li>
+    </ul>
+    </div>
+
+
+
+    <div class="conditions">  
+    <ul>
+        <li>       
+            <p class="footer-text">Publicités ciblées par centres d'intérêt</p>
+        </li>
+    </ul>
+    <ul>
+        <li> 
+            <p class="footer-text">Appareils compatibles</p>
+        </li>
+    </ul>
+    <ul>
+        <li> 
+            <p class="footer-text">Aide</p>
+        </li>
+    </ul>
+            <ul>
+        <li> 
+            <p class="footer-text">Offrez Disney+</p>
+        </li>
+    </ul>
+    <ul>
+        <li> 
+            <p class="footer-text">À propos de Disney+</p>
+        </li>
+    </ul>
+    <ul>
+        <li> 
+            <p class="footer-text">Gérer vos préférences</p>
+        </li>
+    </ul>
+    </div>
+
+
+</section>
+    <p class="footer-text">Le contenu et les plateformes disponibles peuvent varier selon la zone géographique.</p>
+    <p class="footer-text">© 2023 Disney et ses sociétés affiliées. Tous droits réservés.</p>
+    {# <br>
+
+disney by jorge
+
+
+       #}
     </body>
 </html>

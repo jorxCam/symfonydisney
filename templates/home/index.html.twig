@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+  
+ <header class="screen1-left">
+        <div class="screen1-text">
+            <img src="assets/logodisney.svg" width="160" height="180"  alt="Disney+ Logo">
+            <h1>Tout ce que vous imaginez et encore +</h1>
+            <p class="login">Entrez votre adresse e-mail pour commencer ou réactiver votre abonnement.</p>
+
+
+        <form>
+            <input class="form-input" type="email" name="email" id="email" placeholder="Adresse e-mail">
+            <button type="submit" class="buttonprimarysmall"> CONTINUER </button>
+        </form>
+
+        <p class="login">Profitez de 12&nbsp;mois au prix de&nbsp;10 quand vous souscrivez un abonnement Disney+ annuel. Économies par rapport à un an d'abonnement mensuel.</p>
+
+        </div>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+</header> 
+
+<section class="screen2">
+
+<div class="screen2-text">
+
+<h1>Seulement sur Disney+</h1>
+<p class="login"> Des séries, productions originales et films exclusifs que vous ne trouverez sur aucun autre service de streaming.</p>
+
+</div>
+
+</section>
+
+
+<h1 class=screen3-text>Regardez selon vos envies</h1>
+<p class="login3-text"> Profitez des plus belles histoires au monde, partout et à tout moment.</p>
+<section class="screen3">
+</section>
+
+
+<section class="screen4">
+    <div class="icon">
+            <img src="assets/icon1.png" width="480" height="96" alt="Icon Movie Reel"/>
+            <h2 class=screen4-text>Un divertissement sans fin</h2>
+            <p class="login4-text">Découvrez des milliers d'heures de séries, films et productions originales.</p>
+    </div>
+    <div class="icon">
+            <img src="assets/icon2.png" width="480" height="96" alt="Icon Movie Reel"/>
+            <h2 class=screen4-text>Disponible sur vos appareils préférés</h2>
+            <p class="login4-text">Utilisez jusqu'à 4 appareils compatibles en simultané.</p>
+    </div>
+    <div class="icon">
+            <img src="assets/icon3.png" width="480" height="96" alt="Icon Movie Reel"/>
+            <h2 class=screen4-text>Un contrôle parental intuitif</h2>
+            <p class="login4-text">Protégez votre famille avec un contrôle parental simple d'utilisation.</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<h1 class=screen3-text>Questions fréquentes</h1>
+
+
+<div class="accordion">
+    <button class="accordion-btn" >Qu'est-ce que Disney+ ?</button>
+    <button class="accordion-btn" >Que puis-je regarder sur Disney+ ? </button>
+    <button class="accordion-btn" >Quel est le prix de l'abonnement Disney+ ?</button>
+    <button class="accordion-btn" >Quels appareils et plateformes puis-je utiliser avec Disney+ ?</button>
+    <button class="accordion-btn" >L'abonnement Disney+ comprend-il une durée d'engagement ?</button>
+</div>
+
+<br><br><br>
+<h1 class=screen5-text>Accessible sur vos appareils préférés</h1>
+<section class="screen5">
+    <div class="appareil">
+            <img src="assets/appareil1.png" width="340"  alt="image">
+            <h2 class=screen5-text>Télévisions</h2>
+            <p class="login4-text">Amazon Fire TV<br>Appareils Android TV<br>Apple TV<br>Chromecast<br>TV LG<br>Roku<br>Samsung</p>
+    </div>
+    <div class="appareil">
+            <img src="assets/appareil2.png" width="340"  alt="image">
+            <h2 class=screen5-text>Ordinateurs</h2>
+            <p class="login4-text">Chrome OS<br>MacOS<br>PC Windows</p>
+    </div>
+    <div class="appareil">
+            <img src="assets/appareil3.png" width="340"  alt="image">
+            <h2 class=screen5-text>Mobiles et tablettes</h2>
+            <p class="login4-text">Tablettes Amazon Fire<br>Mobiles et tablettes Android<br>iPhone & iPad</p>
+    </div>
+    <div class="appareil">
+            <img src="assets/appareil4.png" width="340"  alt="image">
+            <h2 class=screen5-text>Consoles de jeux</h2>
+            <p class="login4-text">PS4<br>PS5<br>Xbox One<br>Xbox Series X<br>Xbox Series S</p>
+    </div>
+
+
+</section>
+
+
+{% endblock %}

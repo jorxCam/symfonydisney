@@ -1,0 +1,565 @@
+body {
+    background-color: #040814;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-image: url("../assets/original.jpg");
+    /* background-image:url(//cnbl-cdn.bamgrid.com/assets/9b863b263b7d06ebddf509636e7d7e0c8c9b56d3bf44c2db5802772d43a3626f/original); */
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100%;
+    padding: 40px;
+  }
+
+section.screen2{
+    background-image: url("../assets/background2.jpg");
+    /* border: 1rem solid red; */
+    /* border-color: red;  */
+    /* margin-top: 80px; */
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100%;
+    padding: 40px;
+    height: 100vh;
+}
+
+section.screen3{
+    background-image: url("../assets/background3.jpg");
+    /* border: 1rem solid red; */
+    /* border-color: red;  */
+    /* margin-top: 80px; */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 90%;
+    padding: 40px;
+    height: 100vh;
+}
+
+section.screen4{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 0%;
+    margin-bottom: 180px;
+}
+section.screen5{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 180px;
+}
+section.footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    line-height: 1em;
+}
+
+.hidden{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    /* background-color: #040714; */
+    color: #fff;
+
+    transform: translateZ(0);
+    transition: opacity .5s ease-out;
+    position: fixed;
+    top: 0;
+    width: 96%;
+    z-index: 999;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bouton-disney2{
+    border: 1px solid #fff;
+    background-color: #000;
+    padding: 10px 15px 10px 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  .bouton-disney{
+  font-style: normal;
+  font-family: Avenir,sans-serif;
+  pointer-events: auto;
+  list-style-type: none;
+  text-indent: 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  transition: all .2s ease 0s;
+  vertical-align: middle;
+  border: 1px solid silver;
+  color: #f9f9f9;
+  margin: 5px;
+  background-color: rgba(0,0,0,.8);
+  padding: 8px 14px;
+  width: auto;
+  height: 50px;
+  max-width: none;
+  text-transform: uppercase;
+  padding-left: 16px;
+  padding-right: 16px;
+  }
+
+
+  .buttonidentifier{
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .bg_black{
+    background-color: #040714;
+  }
+
+  
+  .bouton-disney-inscription{
+  font-style: normal;
+  font-family: Avenir,sans-serif;
+  pointer-events: auto;
+  list-style-type: none;
+  text-indent: 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  transition: all .2s ease 0s;
+  vertical-align: middle;
+  background: #0063e5;
+  border: none;
+  color: #f9f9f9;
+  margin-left: 25px;
+  padding: 8px 14px;
+  width: auto;
+  height: 50px;
+  max-width: none;
+  text-transform: uppercase;
+  }
+
+
+
+h1 {
+    font-style: normal;
+    font-family: Avenir,sans-serif;
+    text-align: left;
+    margin-top: 0;
+    color: #f9f9f9;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 44px;
+    line-height: 54px;
+    margin-bottom: 30px;
+  }
+  /* * {
+    font-family: Arial, Helvetica, sans-serif;
+ } */
+p.login {
+    color: silver;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: Avenir,sans-serif;
+    text-align: left;
+    margin: 0 0 24px;
+    margin-bottom: 20px;
+    width: 90%;
+} 
+ form {
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    margin-top: 0em;
+    margin-bottom: 5em;
+ }
+
+
+
+input.form-input {
+    font-family: Avenir,sans-serif;
+    background-color: #31343e;
+    border: 1px solid #31343e;
+    color: silver;
+    display: block;
+    font-size: 20px;
+    height: 50px;
+    padding: 0 12px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+button.buttonprimarysmall{
+    font-family: Avenir,sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    transition: all .2s ease 0s;
+    vertical-align: middle;
+    width: 100%;
+    background: #016cf9;
+    border: none;
+    color: #f9f9f9;
+    text-decoration: none;
+    height: 50px;
+    max-width: 260px;
+    padding: 8px 14px;
+    padding-left: 44px;
+    padding-right: 44px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 0;
+}
+button.hint{
+    /* font-family: inherit; */
+    animation: bounce 1.75s infinite;
+    /* background-color: transparent; */
+    border: none;
+    bottom: 2vw;
+    cursor: pointer;
+    font-size: 0;
+    height: 48px;
+    margin: 0 auto;
+    padding: 6px;
+    /* position: absolute; */
+    width: 48px;
+    /* opacity: 1; */
+    left: 5.6vw;
+    margin-left: -14px;
+}
+
+header.screen1-left a {
+    float: right;
+    font-style: normal;
+    font-family: Avenir,sans-serif;
+    list-style-type: none;
+    text-indent: 0;
+    pointer-events: auto;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 18px;
+    align-items: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    transition: all .2s ease 0s;
+    vertical-align: middle;
+    border: 1px solid silver;
+    color: #f9f9f9;
+    margin: 5px;
+    background-color: rgba(0,0,0,.8);
+    padding: 8px 14px;
+    width: auto;
+    height: 50px;
+    max-width: none;
+    text-transform: uppercase;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+header.screen1-left a:hover {
+    background-color: white;
+    color: black;
+}
+
+div.screen1-text{
+    width: 50%;
+    margin-left: 2%;
+    padding-top: 0%;
+    
+}
+div.screen2-text{
+    margin-top: 10%;
+    width: 35%;
+}
+
+h1.screen3-text{
+    font-style: normal;
+    font-family: Avenir,sans-serif;
+    text-align: center;
+    margin-top: 0;
+    color: #f9f9f9;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 44px;
+    line-height: 54px;
+    margin-bottom: 30px;
+}
+p.login3-text{
+    color: silver;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: Avenir,sans-serif;
+    text-align: center;
+    margin: 0 0 24px;
+    margin-bottom: 20px;
+}
+h2.screen4-text{
+    font-style: normal;
+    font-family: Avenir,sans-serif;
+    text-align: center;
+    list-style: none;
+    color: #f9f9f9;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 24px;
+    margin-top: 20px;
+}
+h2.screen5-text{
+    font-style: normal;
+    font-family: Avenir,sans-serif;
+    text-align: center;
+    list-style: none;
+    color: #f9f9f9;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 28px;
+    line-height: 38px;
+    /* margin-left: 30px; */
+    margin-bottom: 24px;
+    margin-top: 20px;
+    width: 80%;
+}
+div.appareil{
+    width: 25%;
+}
+h1.screen5-text{
+    font-style: normal;
+    font-family: Avenir,sans-serif;
+    text-align: center;
+    margin-top: 20;
+    color: #f9f9f9;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 44px;
+    line-height: 54px;
+    margin-bottom: 10px;
+}
+
+p.login4-text{
+    color: silver;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: Avenir,sans-serif;
+    text-align: center;
+    list-style: none;
+    margin: 0 0 24px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+div.icon{
+    width: 32%;
+}
+
+p{
+    color: white;
+}
+div.accordion{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+    position:relative;
+}
+
+button.accordion-btn{
+    padding: 20px 25px;
+    width: 80%;
+    color: #f9f9f9;
+    background-color: #13151d;
+    margin: 10px;
+    border: none;
+    font-size: 20px;
+    text-align: left;
+    position:relative;
+}
+
+button.accordion-btn::after{
+    color: #f9f9f9;
+    /* content: " - Remember this"; */
+    content: "+";
+    font-size: 40px;
+    line-height: .8;
+    position: absolute;
+    right: 0;
+    margin-right:  10px;
+}
+div.conditions{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    margin-left: 15%;
+    line-height: .2em;
+}
+p.footer-text{
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .2px;
+    font-family: Avenir,sans-serif;
+    list-style-type: none;
+    font-size: 12px;
+    line-height: 22px;
+    cursor: pointer;
+    text-align: center;
+    color: silver;
+    /* white-space: wrap; */
+}
+select.fine{
+    list-style-type: none;
+    font-family: Avenir,sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    background-color: transparent;
+    /* border: 1px; */
+    color: #f9f9f9;
+    cursor: pointer;
+    display: inline-block;
+    /* margin: 8px auto; */
+    /* padding: 0 26px; */
+    text-align: center;
+    text-align-last: center;
+    z-index: 1;
+}
+option{
+    list-style-type: none;
+    font-family: Avenir,sans-serif;
+    font-size: 12px;
+    line-height: 22px;
+    background-color: transparent;
+    /* border: 1px; */
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    /* margin: 8px auto; */
+    /* padding: 0 26px; */
+    text-align: center;
+    text-align-last: center;
+    z-index: 1;
+}
+
+i{
+    color: silver;  
+}
+
+div.disneyfinal{
+ text-align: center;
+}
+
+
+div.login{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    min-height: 45vh;
+}
+div.mb-3{
+    color: white;
+}
+
+input.form-control-login{
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    font-family: Avenir,sans-serif;
+    background-color: #31343e;
+    border: 1px solid #31343e;
+    color: silver;
+    display: block;
+    font-size: 20px;
+    height: 50px;
+    padding: 0 12px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 25%;
+} 
+
+.form-control-register{
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    font-family: Avenir,sans-serif;
+    background-color: #31343e;
+    border: 1px solid #31343e;
+    color: silver;
+    display: block;
+    font-size: 20px;
+    height: 50px;
+    padding: 0 12px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+
+.div_form_register{
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+    /* border: 1px solid red; */
+    color: silver;
+    flex-direction: column;
+    align-items: center;
+}
+
+
